@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04E72AD829B4FB0700DB40CB /* ButtonPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E72AD729B4FB0700DB40CB /* ButtonPadView.swift */; };
+		04E3BCA929B60DCF009CE8A1 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3BCA829B60DCF009CE8A1 /* Calculator.swift */; };
+		04E3BCAC29B6165C009CE8A1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3BCAB29B6165C009CE8A1 /* ViewModel.swift */; };
 		04E72ADD29B59ADF00DB40CB /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E72ADC29B59ADF00DB40CB /* ButtonType.swift */; };
 		04E72ADF29B5A00800DB40CB /* CalculatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E72ADE29B5A00800DB40CB /* CalculatorButtonStyle.swift */; };
 		04E72AE129B5A1D000DB40CB /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E72AE029B5A1D000DB40CB /* CalculatorButton.swift */; };
@@ -19,7 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04E72AD729B4FB0700DB40CB /* ButtonPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPadView.swift; sourceTree = "<group>"; };
+		04E3BCA829B60DCF009CE8A1 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		04E3BCAB29B6165C009CE8A1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		04E72ADC29B59ADF00DB40CB /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		04E72ADE29B5A00800DB40CB /* CalculatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonStyle.swift; sourceTree = "<group>"; };
 		04E72AE029B5A1D000DB40CB /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
@@ -42,10 +44,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E3BCA729B60DB8009CE8A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E3BCA829B60DCF009CE8A1 /* Calculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04E3BCAA29B61648009CE8A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04E3BCAB29B6165C009CE8A1 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		04E72AD929B4FB1500DB40CB /* ButtonPad */ = {
 			isa = PBXGroup;
 			children = (
-				04E72AD729B4FB0700DB40CB /* ButtonPadView.swift */,
 				04E72AE029B5A1D000DB40CB /* CalculatorButton.swift */,
 				04E72ADC29B59ADF00DB40CB /* ButtonType.swift */,
 				04E72ADE29B5A00800DB40CB /* CalculatorButtonStyle.swift */,
@@ -82,6 +99,8 @@
 			children = (
 				04F1468F29B4554100B481C9 /* CalculatorApp.swift */,
 				04F1469129B4554100B481C9 /* CalculatorView.swift */,
+				04E3BCAA29B61648009CE8A1 /* ViewModel */,
+				04E3BCA729B60DB8009CE8A1 /* Model */,
 				04E72AE229B5A26C00DB40CB /* Constants */,
 				04E72AD929B4FB1500DB40CB /* ButtonPad */,
 				04F1469329B4554900B481C9 /* Assets.xcassets */,
@@ -169,10 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E72ADD29B59ADF00DB40CB /* ButtonType.swift in Sources */,
+				04E3BCAC29B6165C009CE8A1 /* ViewModel.swift in Sources */,
 				04E72AE129B5A1D000DB40CB /* CalculatorButton.swift in Sources */,
-				04E72AD829B4FB0700DB40CB /* ButtonPadView.swift in Sources */,
 				04F1469229B4554100B481C9 /* CalculatorView.swift in Sources */,
 				04E72AE429B5A29D00DB40CB /* Constants.swift in Sources */,
+				04E3BCA929B60DCF009CE8A1 /* Calculator.swift in Sources */,
 				04E72ADF29B5A00800DB40CB /* CalculatorButtonStyle.swift in Sources */,
 				04F1469029B4554100B481C9 /* CalculatorApp.swift in Sources */,
 			);

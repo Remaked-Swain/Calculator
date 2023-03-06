@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CalculatorView: View {
+    @EnvironmentObject private var viewModel: ViewModel
+    
     var body: some View {
         VStack {
             Spacer()
@@ -23,7 +25,7 @@ struct CalculatorView: View {
 
 extension CalculatorView {
     private var displayText: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(viewModel.displayText)
             .padding()
             .foregroundColor(.white)
             .frame(maxWidth: .infinity, alignment: .trailing)
@@ -33,12 +35,21 @@ extension CalculatorView {
     }
     
     private var buttonPad: some View {
-        ButtonPadView()
+        VStack(spacing: Constants.padding) {
+            ForEach(viewModel.buttons, id: \.self) { row in
+                HStack(spacing: Constants.padding) {
+                    ForEach(row, id: \.self) { button in
+                        CalculatorButton(buttonType: button)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView()
+            .environmentObject(ViewModel())
     }
 }

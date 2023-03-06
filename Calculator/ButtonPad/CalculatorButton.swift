@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct CalculatorButton: View {
+    @EnvironmentObject private var viewModel: ViewModel
     let buttonType: ButtonType
     
     var body: some View {
         Button(buttonType.description) {
-            // action
+            viewModel.performAction(keypad: buttonType)
         }
         .buttonStyle(CalculatorButtonStyle(
-            size: 80,
-            backgroundColor: buttonType.backgroundColor,
-            foregroundColor: buttonType.foregroundColor)
+            size: getButtonSize(),
+            backgroundColor: getBackgroundColor(),
+            foregroundColor: getForegroundColor(),
+            isWide: buttonType == .digit(.zero))
         )
     }
     
@@ -26,5 +28,13 @@ struct CalculatorButton: View {
         let buttonCount: CGFloat = 4.0
         let spacingCount = buttonCount + 1
         return (screenWidth - (spacingCount * Constants.padding)) / buttonCount
+    }
+    
+    private func getBackgroundColor() -> Color {
+        return viewModel.buttonTypeIsHighlighted(buttonType: buttonType) ? buttonType.foregroundColor : buttonType.backgroundColor
+    }
+    
+    private func getForegroundColor() -> Color {
+        return viewModel.buttonTypeIsHighlighted(buttonType: buttonType) ? buttonType.backgroundColor : buttonType.foregroundColor
     }
 }
