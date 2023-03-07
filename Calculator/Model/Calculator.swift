@@ -29,6 +29,8 @@ struct Calculator {
             guard newNumber != nil else { return }
             carryingNegative = false
             carryingDecimal = false
+            carryingZeroCount = 0
+            pressedClear = false
         }
     }
     private var expression: ArithmeticExpression?
