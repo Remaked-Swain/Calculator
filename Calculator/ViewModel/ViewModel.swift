@@ -16,8 +16,9 @@ final class ViewModel: ObservableObject {
     }
     
     var buttons: [[ButtonType]] {
-        [
-            [.allClear, .negative, .percent, .operation(.divide)],
+        let clearType: ButtonType = calculator.showAllClear ? .allClear : .clear
+        return [
+            [clearType, .negative, .percent, .operation(.divide)],
             [.digit(.seven), .digit(.eight), .digit(.nine), .operation(.multiply)],
             [.digit(.four), .digit(.five), .digit(.six), .operation(.subtract)],
             [.digit(.one), .digit(.two), .digit(.three), .operation(.add)],
